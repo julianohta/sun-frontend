@@ -56,7 +56,11 @@
             {% for page in pages %}
                 {% if page.visible %}
                     <div class="list__item">
+                        {% if page.project_slug %}
+                        <a href="/projects/{{ page.project_slug }}">
+                        {% else %}
                         <a href="{% url 'pages:page_detail' page.slug %}">
+                        {% endif %}
                             <div class="list__img" style="background-image: url('/media/{{ page.img }}');"></div>
                             <div class="list__title">
                                 {{ page.title }}
