@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/snap.css' %}">
+    <title>Sun Snapcode</title>
+{% endblock %}
+
+{% block content %}
+    <div class="snap__container">
+        <div class="snapcode" style="background-image: url(/media/{{ snap_obj.img }});"></div>
+    </div>
+{% endblock %}

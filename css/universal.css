@@ -3,10 +3,6 @@
   padding: 0;
   margin: 0; }
 
-body {
-  background-color: #fafafa;
-  font-family: "linuxLibertineRegular"; }
-
 .list-wrap {
   max-width: 900px;
   margin: auto;
@@ -28,8 +24,6 @@ a, a:visited, a:hover {
     display: inline-block;
     margin-left: 8px;
     margin-right: 4px; }
-  .filter__title {
-    font-family: "linux libertine regular bold"; }
   .filter::after {
     display: block;
     content: ' ';
@@ -45,7 +39,6 @@ a, a:visited, a:hover {
   padding: 8px;
   width: 100%; }
   .list__genre {
-    font-family: "linux libertine regular bold";
     font-size: 18px;
     display: inline-block;
     width: 100%;
@@ -63,7 +56,6 @@ a, a:visited, a:hover {
     font-size: 28px;
     margin-top: 4px;
     display: block;
-    font-family: "linux libertine regular bold";
     font-weight: 200; }
   .list__img {
     display: inline-block;
@@ -93,7 +85,6 @@ a, a:visited, a:hover {
     left: 32px;
     color: white;
     font-size: 32px;
-    font-family: "linux libertine regular bold";
     padding: 4px;
     padding-left: 16px;
     padding-right: 16px;
@@ -118,7 +109,6 @@ a, a:visited, a:hover {
       clear: both; }
   .nav__title {
     float: left;
-    font-family: "mermaid";
     letter-spacing: 1px;
     font-size: 32px; }
   .nav__icon {

@@ -1,0 +1,17 @@
+.snap {
+    &__container {
+        max-width: 560px;
+        margin: auto;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 32px;
+    }
+}
+
+.snapcode {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
