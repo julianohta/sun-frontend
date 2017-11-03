@@ -39,14 +39,20 @@ hr {
       position: relative;
       width: 25%;
       height: 100px;
-      background-color: #FF9999;
+      background-color: #FFCCCC;
       float: left;
       margin-left: 15px;
     }
 
-    &__text {
+    &__header {
         width: 100%;
         font-size: 18px;
+    }
+
+    &__text {
+        width: 70%;
+        font-size: 18px;
+        float: left;
 
         &--title {
             color: black;
@@ -58,22 +64,24 @@ hr {
 
         &--summary {
           font-style: italic;
-          margin-top:3px;
+          margin-top:12px;
           color: #696969;
           font-size: 18px;
         }
 
         &--container {
           margin-top: 40px;
-          width: 70%;
+          width: 100%;
           float: left;
-
         }
     }
 
     &__img {
         width: 100%;
+        padding-right: 36px;
+        padding-left: 36px;
         height: 600px;
+        margin-top:10px;
         background-color: black;
         background-size: cover;
         background-repeat: no-repeat;
@@ -81,6 +89,7 @@ hr {
         position: absolute;
         left:50%;
         transform: translateX(-50%);
+        background-clip: content-box;
 
         &--text {
             color: black;
@@ -96,7 +105,7 @@ hr {
 
 @media (min-width: 760px) {
   .detail__container {
-    width: 1000px;
+    width: 1100px;
   }
 
   .detail__text--container {
@@ -110,5 +119,20 @@ hr {
   }
   .detail__text--title {
     font-size: 42px;
+  }
+  .detail__img {
+      width: 100%;
+      padding-right: 120px;
+      padding-left: 120px;
+      height: 600px;
+      margin-top:10px;
+      background-color: black;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
+      background-clip: content-box;
   }
 }
