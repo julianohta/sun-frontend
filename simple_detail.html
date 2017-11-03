@@ -6,14 +6,58 @@
 {% endblock %}
 
 {% block content %}
-    <div class="detail__img" style="background-image: url('/media/{{ page.img }}');">
-        <div class="detail__text--title">
-            {{ page.title }}
+    <div class="detail__container">
+      <div class="detail__text">
+          <div class="detail__text--title">
+              {{ page.title }}
+          </div>
+          <hr>
+          <div class="detail__split">
+            <div class="detail__split-left">
+                By {{ page.author }}
+                {{ page.date }}
+            </div>
+            <div class="detail__split-right">
+              <a href="https://facebook.com">
+                <!-- Facebook Icon -->
+                <img class="icon icons8-Facebook-Like-Filled" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACSklEQVRoQ+2Z/zUEMRDHv1cBOqADKkAFqAAdUAEqQAWoABWgAlSAClAB73vvsi+bze5OcrPJZd/lz33ZyXx2fmVmJxjJmoyEA0sQgSVfAWxa+x4AXAB4E7wbvGVIi/x5tPkBsDsETGoQsn0C2AJAKLWVA4TK08XO1SiAQYPd51pGd1pjbQwgZDgGcKsFk8u1qP8dgKMxgDDoN8YAQgY1j1AT5HzZfQD3gq+tdr6aIEdpVvG9HpAXADsCWNGWIUBWAXwLTl/4YD8BcCkAWfj0+wFgXQDCjMXMpbK0XYs+/yTQ7N25GQte6d6iDcJKfSjQ6hoAXVBt2SBu/yA5hL0Fb7Jc0iCXyO3aQ3fkuae2a9ogXZe8LsFGBq8bN/NqGfA+L578iNM4s0GeAWwHCDJbjYwYi0YcV3vlEQCLrypIrEXnganua7ZF2OicRUg1MnKAVMYoHaS6Hdgg0hrgGi2XRX5ntagR7KWBHADg5XS63IIY4+e5LFK7dJYMUhtguCAxtSSXRWoeVTJIp2vF1JIcFqllLF+wlwJSy1g+kJgUnMMijTbZjZFSQBojV19jFVpLcliEMcL+p1qlgvS6FglDa0lqizQyli/Yu0DMPw03s6UEYSPFXr8xffG5VlsKbmuLU4K0DvVCQAhIq7D5sv82pQRp/UHkAwlNwSlBvtqGf6WBVMOGtu7OfR5SS8zHCM12oeMBb7Zqa6zMc8lvAe61R58sUFez8cxKqJYd++lOHMh5s1UfiKIeaUT5YiTNycqnLEGUP+jc4kZjkX990X4zCY4bEAAAAABJRU5ErkJggg==">
+              </a>
+
+              <a href="https://facebook.com">
+                <!-- Twitter Icon -->
+                <img class="icon icons8-Twitter" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABjElEQVRIS9WW/TEEQRDF30XgZEAEZIAIEIETASJABjJABIgAEdzJQAhkoH5b87Zmv3tQV3X9z97e9PTrfv2mZ2dak83WhKONATqUdCZpPzGzkvQo6S1jirWVK9qRxKaHAirvJF0M+N9I+pJ0Iumbp4FYuJZ0HgRbSLoPJPWRCpgbiEqgACPT25TRUCyy3QoAQeV2X0Xe+5mqy7n2GpwvAyC4QBstqXsEl089m8mICl+yCtn4GgQ6lfSMby5vgu6NBGCdSqGNHkXsyAo0EBVhiGIMLBI896E/JFZXZNWVBpryrxnzjxLep4J7/T0JoXrPe4TCDqJRAn5XSUgdoHk6rMeBIBGX3SSeDhB/cEYAQlWMpd8a866hzPb0/i9RNKpp94h36KNXf5E444uEG9Z3HwHGNPDsK6GPIeorYxLIDgBepqkeAfOkrg5opCKLgrsmOmpGQdwjK8094vD2lt+TKNMZmjs9GaqI4NAUPUMAMJUBYNBOWlsMvtIB9jni6WAokilejf4S25ivoHBRP+PxRWvpRzTQAAAAAElFTkSuQmCC">
+              </a>
+
+              <a href="https://facebook.com">
+                <!-- Mail Icon -->
+                <img class="icon icons8-Mail-Filled" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACKElEQVRoQ+3ZP8hNYRwH8M8rLMogpQySMshiM5rsYpJNBkVK/kdE5H9KlEE2mchuMtosMijJoJQMyoLQr56j23HOe8993+ece3t7nune2+/5/p7v93u+v+fUnbNE1twS4aEQmTUniyPFkZ4UiEfrT0/Yg8IWIoPK3aFZcaSDSIOWFEcGlbtDsyZHduIutnTYP42StziCF6PNm4jEb8twAJewbhqnbej5GefxEL/r918TkdO4noBWIb6fmzKZy7iG7+kcp9L3f8dqC/t7nMCzVLk+kdvHYK/+8cbxGHHoT+kcu3ETm+rCjptaL3EIb9LGbXiA7T079AoH8Tr12Yr72NHWdxyR2BfP4yOcwZcEtAs3sDkzoXc4iecJdy2uYn/KbWu7LkSqzd9wBXfwE8uTWxHANYsk9DUNllD9F1bgKM5idRfsSYhUePX8RKMLOIyVXZqO1PzAPVxECBWrNQfzYS+ESIVXz89G3MKejmSe4jg+dM1BX0Ta8hODIAZCDIamFQGOIEegY3XOQZ9E2vITTu9NQd2Qij6mgfEkXWYT52AIIqP5OTYydeL3mHaxYvpUK6be7ab7oONj+V/ZYjIyX896fqrasffBrBGp56dyZOx9MItERvMTnzvdB7NMZKFnm2hfXxmZ6BA5iguRHCrmxCiO5FQzB1ZxJIeKOTGKIznVzIFVHMmhYk6M4khONXNglb+nc6iYE6M4klPNHFjFkRwq5sRYMo78BQy2dA/33etLAAAAAElFTkSuQmCC">
+              </a>
+
+              <a href="https://facebook.com">
+                <!-- Print Icon -->
+                <img class="icon icons8-Print" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAATRJREFUaAXtWAsOgjAMFeNNPIPegEvrDTyDnEX7CBr2ZCArbJR0yZJ1o7/3WsFVh+nxmn5k1SeqMevHsUMLZ55AaZZOCQGM1mSCPVaZ1XNeQgxfbtkZyI04+3MGGJHcsjOQG3H2twsGasnqIRNvwKHJSQ89s+Tev/4Qc43PgqfMM2sZkRskAPTMjl30wNbRv0uA125i/TOWbMA1bPX7E+vAh/kSAh1BRhuUbxLTpZtYB/H6r5AgUnSY7wFPoGj9iHNnwBlQIuA3c0oA1erexGoIlQZSeoBd4uNKM1S33eZLaAkGVAhqqIOueQaQQKNEIfiDIbZistLNoHob+9TFFgfElvg8JrNeTI7p8/73Yitm6LMPxf5Yu+Zn+dtFD/TRNbc2z0DKe4BrtChr5hnwBIrWjzh/Axa7uJIS7e3vAAAAAElFTkSuQmCC">
+              </a>
+            </div>
+          </div>
+      </div>
+
+      <div class="detail__img--spacer">
+        <div class="detail__img" style="background-image: url('/media/{{ page.img }}');">
         </div>
-    </div>
-    <div class="detail__text">
-        <p>{{ page.author }}</p>
-        <p>{{ page.date }}</p>
-        {{ page.content | safe }}
+      </div>
+
+      <div class="detail__text--summary">
+        {{page.summary}}
+      </div>
+
+      <div class="detail__text--container">
+        <div class="detail__text">
+            {{ page.content | safe }}
+        </div>
+        <div class="detail__sidebar">
+          
+        </div>
+      </div>
+
     </div>
 {% endblock %}
