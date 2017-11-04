@@ -1,0 +1,6 @@
+.test {
+	background-color: yellow;
+	&_child{
+	background-color: black;
+	}
+}

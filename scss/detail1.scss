@@ -5,31 +5,68 @@ p {
 .detail {
     &__text {
         width: 100%;
-        max-width: 500px;
+        max-width: 800px;
         margin: auto;
         font-size: 18px;
         padding: 30px;
 
         &--title {
-            color: white;
-            font-size: 42px;
-            position: absolute;
-            top: 300px;
+            color: black;
+            font-size: 55px;
+            position: relative;
+            margin-top: 300px;
             text-align: center;
+            vertical-align: bottom;
             width: 100%;
+            margin: auto;
+            padding: 20px;
         }
     }
 
+    &__title-wrap {
+        width:100%;
+        margin: auto;
+        width: 50%;
+        position: relative;
+        float: left;
+        padding: 100px;
+    }
+
+    &__title-center {
+        width:100%;
+        margin: auto;
+        text-align: center;
+        vertical-align: bottom;
+        padding: 30px;
+    }
+
+
     &__img {
-        width: 100%;
+        width: 50%;
         height: 600px;
         background-color: black;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        float: right;
 
-        &-text {
-            color: white;
-        }
     }
+    
+    &__spacer {
+        content: ' ';
+        clear: both;
+        width: 100vw;
+            display: block;
+
+    }
+
+    &__header-spacing {
+        content: ' ';
+        clear: both;
+        width: 100vw;
+        height: 10px;
+            display: block;
+    }
+
+
 }
