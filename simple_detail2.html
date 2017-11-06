@@ -1,10 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 
+@media (min-width: <pixel width>) {}
+}
+
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/detail2.css' %}">
 {% endblock %}
 
 {% block content %}
+	<div class="detail__container">
+
+ 		<div class="detail__img" style="background-image: url('/media/{{ page.img }}');">
+    	</div>
+    	<div class= "detail__text--title">
+    		<div class="detail__container--bottom--left">
+    			{{page.title}}
+    		</div>
+    	</div>
+   	</div>
+    <div class= "detail__header-spacing">
+	</div>
+	<div class="detail__spacer" >
+	</div>
+    <div class="detail__text">
     {{ page.content | safe }}
+    </div>
 {% endblock %}
