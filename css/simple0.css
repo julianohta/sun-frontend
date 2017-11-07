@@ -6,7 +6,7 @@ p {
   width: 100%; }
 .header__img {
   width: 100%;
-  height: auto;
+  height: 600px;
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
