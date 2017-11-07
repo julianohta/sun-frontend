@@ -24,7 +24,7 @@ p {
   width: 100%;
   max-width: 600px;
   margin: auto;
-  font-size: 18px;
+  font-size: 17px;
   padding: 30px; }
 
 .header {
@@ -41,7 +41,7 @@ p {
     font-size: 20px;
     margin-bottom: 12px; }
   .header__title {
-    font-size: 72px;
+    font-size: 64px;
     margin-bottom: 8px; }
 
 img {
