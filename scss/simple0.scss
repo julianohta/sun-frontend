@@ -1,5 +1,31 @@
 @import 'simplebase';
 
 .header {
-    text-align: center;
+    text-align: left;
+    position: relative;
+    color: white;
+
+    &__container {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+    }
+
+    &__author {
+        font-size: 18px;
+    }
+
+    &__summary {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        font-size: 72px;
+        margin-bottom: 8px;
+    }
+}
+
+img {
+    width: 100% !important;
 }

@@ -6,12 +6,7 @@ p {
 
     &__title {
         color: white;
-        font-size: 72px;
         width: 100%;
-        padding-left: 32px;
-        padding-right: 32px;
-        position: absolute;
-        top: 300px;
     }
 
     &__img {
@@ -22,6 +17,7 @@ p {
         background-repeat: no-repeat;
         background-position: center;
     }
+
 }
 
 .detail {
@@ -43,7 +39,7 @@ p {
 
     &__text {
         width: 100%;
-        max-width: 560px;
+        max-width: 600px;
         margin: auto;
         font-size: 18px;
         padding: 30px;
