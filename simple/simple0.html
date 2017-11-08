@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="header header__img" style="background-image: url('/media/{{ page.img }}');">
+    <div class="header">
+        <img src="/media/{{ page.img }}" class="header__img">
         <div class="header__container">
             {% if page.dark_title %}
             <div class="header__title" style="color: black !important;">
@@ -22,7 +23,6 @@
         </div>
     </div>
     <div class="detail__text">
-
         {{ page.content | safe }}
     </div>
 {% endblock %}
