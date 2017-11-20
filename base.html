@@ -14,20 +14,90 @@
         ga('create', 'UA-105303753-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="nav">
-        <div class="nav__wrap">
-            <div class="nav__icon" style="background-image: url('{% static 'img/sun.png' %}');" alt="sun"></div>
-            <div class="nav__title">Sun//Projects</div>
-            <div class="nav__link"><a href="https://www.instagram.com/cornellsun/?hl=en" target="_blank">instagram</a></div>
-            <div class="nav__link"><a href="https://www.facebook.com/cornellsun/" target="_blank">facebook</a></div>
-            <div class="nav__link"><a href="https://twitter.com/cornellsun/" target="_blank">twitter</a></div>
-            <div class="nav__link"><a href="https://www.youtube.com/user/CornellSunVideo" target="_blank">youtube</a></div>
-            <div class="nav__link"><a href="http://cornellsun.com/feed/" target="_blank">rss</a></div>
+    <style>
+        /*
+        @font-face {
+            font-family: barcode;
+            src: url({% static 'fonts/Libre_Barcode_39_Text/lbarcode39reg.ttf' %});
+        }
+        @font-face {
+            font-family: roboto;
+            src: url({% static 'fonts/Noto_Sans/NotoSans-Regular.ttf' %});
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: roboto;
+            src: url({% static 'fonts/Noto_Sans/NotoSans-Bold.ttf' %});
+            font-weight: bold;
+        }*/
+        @font-face {
+            font-family: roboto;
+            src: url({% static 'fonts/Roboto/Roboto-Light.ttf' %});
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: roboto;
+            src: url({% static 'fonts/Roboto/Roboto-Bold.ttf' %});
+            font-weight: bold;
+        }
+    </style>
+    <header>
+        <a href="http://cornellsun.com/" target="_blank">
+            <div class="logo"></div>
+        </a>
+        <!-- in lieu of a logo -->
+        <!--<h1>ThriftSwap</h1>-->
+        <div class="nav noselect">
+            <div class="nav__item nav__text">
+                <a href="{% url 'list_view' %}">Home</a>
+            </div>
+            <div class="nav__item nav__text">
+                <a href="{% url 'snapchat:snap' %}">Snap Code</a>
+            </div>
+            <div class="nav__item nav__text">
+                <a href="http://cornellsun.com/contact-us/" target="_blank">Contact</a>
+            </div>
+            <a href="https://twitter.com/cornellsun/" target="_blank">
+                <div class="nav__icon nav__icon-twitter"></div>
+            </a>
+            <a href="https://www.instagram.com/cornellsun/" target="_blank">
+                <div class="nav__icon nav__icon-instagram"></div>
+            </a>
+            <a href="https://www.facebook.com/cornellsun/" target="_blank">
+                <div class="nav__icon nav__icon-facebook"></div>
+            </a>
         </div>
-    </div>
-    {% block content %}
-    {% endblock %}
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="footer__title">About</div>
+        <div class="footer__col">
+            <div class="footer__text">
+                The projects page is where The Sun's experimental pages are consolidated.
+                Many of these formats are one-off, and don't fit within the
+                context of the main Sun site.
+                <br>
+                <br>
+                © Copyright 2017, The Cornell Daily Sun
+            </div>
+        </div>
+        <div class="footer__media">
+            <a href="https://twitter.com/cornellsun/" target="_blank">
+                <div class="nav__icon light-icon nav__icon-twitter"></div>
+            </a>
+            <a href="https://www.instagram.com/cornellsun/" target="_blank">
+                <div class="nav__icon light-icon nav__icon-instagram"></div>
+            </a>
+            <a href="https://www.facebook.com/cornellsun/" target="_blank">
+                <div class="nav__icon light-icon nav__icon-facebook"></div>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

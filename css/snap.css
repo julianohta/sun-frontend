@@ -1,9 +1,9 @@
 .snap__container {
-  max-width: 560px;
+  max-width: 300px;
   margin: auto;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 32px; }
+  padding: 32px;
+  margin-top: 64px;
+  margin-bottom: 64px; }
 
 .snapcode {
   width: 100%;
