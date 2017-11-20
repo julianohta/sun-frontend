@@ -24,17 +24,32 @@
             {% for triple in triplet %}
             <div class="row-wrap">
             {% for page in triple %}
-                {% if page %}
                 <div class="col-third article">
-                    <a href="{% url 'pages:page_detail' page.slug %}">
+                    {% if not page.html %}
+                        {% if not page.content %}
+                            <a href="/projects/{{ page.slug }}">
+                        {% else %}
+                            <a href="{% url 'pages:page_detail' page.slug %}">
+                        {% endif %}
+                    {% else %}
+                        <a href="{% url 'pages:page_detail' page.slug %}">
+                    {% endif %}
                         <div class="sub-img" style="background-image: url(/media/{{ page.img }});"></div>
                     </a>
-                    <a href="{% url 'pages:page_detail' page.slug %}">
+                    {% if not page.html %}
+                        {% if not page.content %}
+                            <a href="/projects/{{ page.slug }}">
+                        {% else %}
+
+                            <a href="{% url 'pages:page_detail' page.slug %}">
+                        {% endif %}
+                    {% else %}
+                        <a href="{% url 'pages:page_detail' page.slug %}">
+                    {% endif %}
                         <h3>{{ page.title }}</h3>
                     </a>
                         <p>{{ page.summary }}</p>
                 </div>
-                {% endif %}
             {% endfor %}
             </div>
             {% endfor %}
