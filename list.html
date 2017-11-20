@@ -9,12 +9,29 @@
         <div class="spacer"></div>
         <div class="float-wrap">
             <div class="image__wrap">
-                <a href="{% url 'pages:page_detail' first.slug %}">
+
+                {% if not page.html %}
+                    {% if not page.content %}
+                        <a href="/projects/{{ first.slug }}">
+                    {% else %}
+                        <a href="{% url 'pages:page_detail' first.slug %}">
+                    {% endif %}
+                {% else %}
+                    <a href="{% url 'pages:page_detail' first.slug %}">
+                {% endif %}
                     <div class="image" style="background-image: url(/media/{{ first.img }});"></div>
                 </a>
             </div>
             <div class="col-third">
-                <a href="{% url 'pages:page_detail' first.slug %}">
+                {% if not page.html %}
+                    {% if not page.content %}
+                        <a href="/projects/{{ first.slug }}">
+                    {% else %}
+                        <a href="{% url 'pages:page_detail' first.slug %}">
+                    {% endif %}
+                {% else %}
+                    <a href="{% url 'pages:page_detail' first.slug %}">
+                {% endif %}
                     <h3>{{ first.title }}</h3>
                 </a>
                 <p>{{ first.summary }}</p>
@@ -40,7 +57,6 @@
                         {% if not page.content %}
                             <a href="/projects/{{ page.slug }}">
                         {% else %}
-
                             <a href="{% url 'pages:page_detail' page.slug %}">
                         {% endif %}
                     {% else %}
@@ -48,7 +64,7 @@
                     {% endif %}
                         <h3>{{ page.title }}</h3>
                     </a>
-                        <p>{{ page.summary }}</p>
+                    <p>{{ page.summary }}</p>
                 </div>
             {% endfor %}
             </div>
