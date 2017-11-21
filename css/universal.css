@@ -46,7 +46,7 @@ header {
       color: black; }
   .nav__icon {
     float: right;
-    margin-left: 16px;
+    margin-left: 10px;
     height: 17px;
     width: 17px;
     margin-top: 7px;
@@ -62,6 +62,8 @@ header {
       background-image: url(/static/img/instagram.svg); }
     .nav__icon-instagram {
       background-image: url(/static/img/twitter.svg); }
+    .nav__icon-header {
+      display: none; }
     .nav__icon:hover {
       filter: invert(0%);
       -webkit-filter-: invert(0%); }
@@ -102,6 +104,9 @@ footer {
   bottom: 48px;
   right: 32px; }
 
+@media (min-width: 480px) {
+  .nav__icon-header {
+    display: inline; } }
 @media (min-width: 760px) {
   .footer__col {
     width: 33.33%; }
@@ -114,6 +119,8 @@ footer {
     margin-bottom: 0; }
     .nav__item {
       margin-right: 32px; }
+    .nav__icon {
+      margin-left: 16px; }
 
   header {
     height: 62px; } }
