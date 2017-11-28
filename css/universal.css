@@ -59,9 +59,9 @@ header {
       background-image: url(/static/img/facebook.svg);
       background-size: contain; }
     .nav__icon-twitter {
-      background-image: url(/static/img/instagram.svg); }
-    .nav__icon-instagram {
       background-image: url(/static/img/twitter.svg); }
+    .nav__icon-instagram {
+      background-image: url(/static/img/instagram.svg); }
     .nav__icon-header {
       display: none; }
     .nav__icon:hover {
